@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="100bb7b6-df04-49e7-9155-7ac24c395dab">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Mysql - Adaptor"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="invoice_no_para" class="java.lang.String">
+		<parameterDescription><![CDATA[Invoice no. of receipt]]></parameterDescription>
+	</parameter>
+	<parameter name="total_inv_amt" class="java.lang.Double"/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM purchase
+where
+invoice_no =  $P{invoice_no_para}]]>
+	</queryString>
+	<field name="dealer_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="dealer_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase"/>
+	</field>
+	<field name="gstin" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="gstin"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase"/>
+	</field>
+	<field name="invoice_no" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="invoice_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase"/>
+	</field>
+	<field name="invoice_date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="invoice_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase"/>
+	</field>
+	<field name="item_no" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="item_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase"/>
+	</field>
+	<field name="item_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="item_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase"/>
+	</field>
+	<field name="quantity" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="quantity"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase"/>
+	</field>
+	<field name="price" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase"/>
+	</field>
+	<field name="gst" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="gst"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase"/>
+	</field>
+	<field name="cgst" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="cgst"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase"/>
+	</field>
+	<field name="sgst" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="sgst"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase"/>
+	</field>
+	<field name="total_gst_amt" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="total_gst_amt"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase"/>
+	</field>
+	<field name="total_amt" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="total_amt"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="purchase"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="178" y="-8" width="198" height="38" isRemoveLineWhenBlank="true" uuid="dbfa532c-53a1-4ead-8c1c-8253523e26d7"/>
+				<textElement textAlignment="Center">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[My Purchases]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="84" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="70" height="30" uuid="dfaa634d-bd0e-4662-85bf-d7b003ac7d2a"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Dealer : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="69" y="0" width="154" height="30" uuid="ffcbfa3e-edd9-4049-a848-90067a1fb105"/>
+				<textElement textAlignment="Left">
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dealer_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="30" width="70" height="30" uuid="a4da9976-2979-47b6-9be7-1370c3137fae"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[GSTIN :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="70" y="30" width="150" height="30" uuid="89e81c85-0c1a-42ae-9e01-bfb5f6f8e850"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gstin}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="326" y="0" width="110" height="30" uuid="c7375b22-ae3e-4336-a345-bedd1b96ee6a"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Invoice No. :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="434" y="0" width="100" height="30" uuid="ab457c92-4c2f-497f-8592-3dbf659bbc60"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_no}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="326" y="30" width="114" height="30" uuid="ae6d72fe-7289-4206-80d0-13d6e9848dc6"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Invoice Date :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="440" y="30" width="100" height="30" uuid="3ecdce89-93dd-4e83-98b9-4e4a3ef15971"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="77" splitType="Stretch">
+			<staticText>
+				<reportElement x="-11" y="0" width="59" height="70" uuid="89730f03-7ee9-4c0e-9f26-b52bd7137f87">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b28bcc91-ab00-4575-b56f-a9e0fede0b80"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Item No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="0" width="75" height="70" uuid="a6b6a4b9-9c63-435a-88cf-812103906130">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3d946745-7c13-497a-b5e1-9e7987c3aa62"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Item Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="131" y="0" width="42" height="70" uuid="dbde5020-cdf1-46e8-a9ec-daafb1842da5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="220d8385-2ac2-4094-b6d7-8482e69bc806"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[                Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="176" y="0" width="59" height="70" uuid="4ac5dce1-bd54-4544-ae91-9016d22e74ca">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="53a2290a-57e9-4f3b-a01f-aaeec134654c"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Price (Rs)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="244" y="0" width="39" height="70" uuid="c89e400a-eba3-4286-86a9-a7d35461c3c2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b635cdde-bbb5-4cdd-b915-945af2037e1b"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[GST %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="0" width="62" height="70" uuid="6da5461b-b1f5-4379-bbb2-156be8d40b58">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6485f9cd-3d9a-43f6-a0d4-0208df508d95"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[CGST Amt (Rs)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="365" y="0" width="56" height="70" uuid="7a3856b3-e861-41e8-9bec-dda2ca4a35ed">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b0adc204-c3f7-4556-8ad2-dfafc47b6357"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[SGST Amt (Rs)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="434" y="0" width="63" height="70" uuid="a7997d13-54ed-49c8-88ee-0349df16f821">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7ec3582f-43ef-4491-b995-372df6533fa2"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Total GSTAmt (Rs)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="504" y="0" width="61" height="70" uuid="41852175-2ea1-487d-95e2-e1f93985e44c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8ba34ba1-f7a3-4209-aae7-c8731145acba"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Total Amt (Rs)]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="-10" y="0" width="59" height="30" uuid="d2e2cab1-5c59-403b-8b9a-4a62e327bf5f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b28bcc91-ab00-4575-b56f-a9e0fede0b80"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="49" y="0" width="75" height="30" uuid="2b1bdd94-143d-4323-93ba-ae041a6ee607">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3d946745-7c13-497a-b5e1-9e7987c3aa62"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="131" y="0" width="42" height="30" uuid="5903aab5-9796-4e1f-b944-c93d6382ea0c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="220d8385-2ac2-4094-b6d7-8482e69bc806"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="176" y="0" width="59" height="30" uuid="5d4b8124-41e7-44b8-81ea-42f1d4895b67">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="53a2290a-57e9-4f3b-a01f-aaeec134654c"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="244" y="0" width="39" height="30" uuid="091e70f9-f161-436e-b77f-1a8709a94078">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b635cdde-bbb5-4cdd-b915-945af2037e1b"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gst}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="287" y="0" width="62" height="30" uuid="0078ef89-fca7-46f6-99e8-28d5400cdf8b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6485f9cd-3d9a-43f6-a0d4-0208df508d95"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cgst}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="361" y="0" width="58" height="30" uuid="bbe8ffd7-c760-4ea0-a1c9-10a514fcdf2a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b0adc204-c3f7-4556-8ad2-dfafc47b6357"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sgst}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="431" y="0" width="70" height="30" uuid="66c3a359-e658-40f8-9d4b-a3d3b97f89e4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7ec3582f-43ef-4491-b995-372df6533fa2"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_gst_amt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="504" y="0" width="61" height="30" uuid="6187ce8f-0180-4938-bd61-8d14ce5e27a7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8ba34ba1-f7a3-4209-aae7-c8731145acba"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_amt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="5" width="281" height="47" uuid="4a397ee0-9c58-4eb0-9821-f65ae305d163"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Total amount for the invoice : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="287" y="5" width="131" height="47" uuid="781a883f-e683-45cb-a5e8-67270ae8c719"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total_inv_amt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="515" y="10" width="100" height="30" uuid="032cb719-ce5e-43cd-9788-27e816faa92c"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="423" y="10" width="100" height="30" uuid="643ef4f6-7c91-4f49-b42a-1155a87159c1"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Page No. : ]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

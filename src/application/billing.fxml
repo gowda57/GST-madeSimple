@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Billing">
+   <children>
+      <Label layoutX="48.0" layoutY="101.0" prefHeight="31.0" prefWidth="168.0" text="Customer Name :">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cb" layoutX="220.0" layoutY="97.0" onAction="#customerClicked" prefHeight="39.0" prefWidth="218.0" promptText="Select Customer" />
+      <Label layoutX="450.0" layoutY="101.0" prefHeight="31.0" prefWidth="168.0" text="Mobile Number :">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="mobile" editable="false" layoutX="618.0" layoutY="97.0" prefHeight="39.0" prefWidth="137.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="768.0" layoutY="97.0" prefHeight="31.0" prefWidth="94.0" text="Email ID :">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="email" editable="false" layoutX="866.0" layoutY="93.0" prefHeight="39.0" prefWidth="296.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="48.0" layoutY="150.0" prefHeight="31.0" prefWidth="79.0" text="GSTIN : ">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="gstin" editable="false" layoutX="127.0" layoutY="146.0" prefHeight="39.0" prefWidth="245.0" promptText="Optional">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="394.0" layoutY="150.0" prefHeight="31.0" prefWidth="168.0" text="Invoice No. :">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inv_no" editable="false" layoutX="522.0" layoutY="146.0" prefHeight="39.0" prefWidth="263.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="806.0" layoutY="150.0" prefHeight="31.0" prefWidth="168.0" text="Invoice Date :">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="534.0" layoutY="17.0" prefHeight="31.0" prefWidth="168.0" text="Billing">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="204.0" prefHeight="27.0" prefWidth="102.0" text="Item Name :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="item_name" layoutX="157.0" layoutY="202.0" onAction="#item_nameClicked" prefHeight="31.0" prefWidth="179.0" promptText="Select Item" />
+      <Label layoutX="348.0" layoutY="205.0" prefHeight="25.0" prefWidth="79.0" text="Item No. :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="item_no" editable="false" layoutX="435.0" layoutY="198.0" prefHeight="39.0" prefWidth="179.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="63.0" layoutY="249.0" prefHeight="27.0" prefWidth="50.0" text="Qty :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="gst" editable="false" layoutX="709.0" layoutY="199.0" prefHeight="39.0" prefWidth="79.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="price" editable="false" layoutX="1019.0" layoutY="198.0" prefHeight="39.0" prefWidth="122.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="639.0" layoutY="205.0" prefHeight="25.0" prefWidth="79.0" text="GST % :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="qty" layoutX="119.0" layoutY="247.0" onAction="#qtyClicked" prefHeight="31.0" prefWidth="94.0" promptText="Select" />
+      <Label layoutX="249.0" layoutY="249.0" prefHeight="31.0" prefWidth="168.0" text="CGST Amt (Rs) :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cgst_amt" editable="false" layoutX="373.0" layoutY="245.0" prefHeight="39.0" prefWidth="122.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="528.0" layoutY="247.0" prefHeight="31.0" prefWidth="168.0" text="SGST Amt (Rs) :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="sgst_amt" editable="false" layoutX="661.0" layoutY="245.0" prefHeight="39.0" prefWidth="122.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="815.0" layoutY="247.0" prefHeight="31.0" prefWidth="168.0" text="Total GST Amt (Rs) :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tot_gst_amt" editable="false" layoutX="983.0" layoutY="243.0" prefHeight="39.0" prefWidth="122.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="48.0" layoutY="296.0" prefHeight="31.0" prefWidth="168.0" text="Total Amount (Rs) :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tot_amt" editable="false" layoutX="209.0" layoutY="292.0" prefHeight="39.0" prefWidth="122.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button alignment="CENTER" layoutX="822.0" layoutY="294.0" mnemonicParsing="false" onAction="#addClicked" prefHeight="40.0" prefWidth="137.0" text="Add Entry">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="33.0" layoutY="22.0" mnemonicParsing="false" onAction="#backClicked" prefHeight="20.0" prefWidth="86.0" text="Back">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="inv_date" editable="false" layoutX="941.0" layoutY="150.0" />
+      <TableView fx:id="tv" layoutX="15.0" layoutY="355.0" prefHeight="537.0" prefWidth="1170.0">
+         <columns>
+            <TableColumn fx:id="item_no1" prefWidth="129.0" text="Item No." />
+            <TableColumn fx:id="item_name1" minWidth="0.0" prefWidth="247.0" text="Item Name" />
+            <TableColumn fx:id="qty1" minWidth="0.0" prefWidth="74.0" text="Qty" />
+            <TableColumn fx:id="price1" prefWidth="107.0" text="Price (Rs)" />
+            <TableColumn fx:id="gst1" prefWidth="72.0" text="GST %" />
+            <TableColumn fx:id="cgst_amt1" prefWidth="126.0" text="CGST Amt (Rs)" />
+            <TableColumn fx:id="sgst_amt1" prefWidth="122.0" text="SGST Amt (Rs)" />
+            <TableColumn fx:id="tot_gst_amt1" minWidth="0.0" prefWidth="149.0" text="Total GST Amt (Rs)" />
+            <TableColumn fx:id="tot_amt1" prefWidth="143.0" text="Total Amount (Rs)" />
+         </columns>
+      </TableView>
+      <Button alignment="CENTER" layoutX="976.0" layoutY="22.0" mnemonicParsing="false" onAction="#printClicked" prefHeight="49.0" prefWidth="122.0" text="Print">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="770.0" layoutY="1.0" prefHeight="13.0" prefWidth="168.0" text="Sum Total (Rs)">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="sum_total" alignment="CENTER" editable="false" layoutX="783.0" layoutY="32.0" prefHeight="27.0" prefWidth="146.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </TextField>
+      <Label layoutX="804.0" layoutY="205.0" prefHeight="27.0" prefWidth="209.0" text="Price for single item (Rs) :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button alignment="CENTER" layoutX="265.0" layoutY="15.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="40.0" prefWidth="137.0" text="New Billing">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

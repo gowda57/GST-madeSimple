@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Items">
+   <children>
+      <TableView fx:id="tv" layoutX="82.0" layoutY="66.0" prefHeight="820.0" prefWidth="736.0">
+         <columns>
+            <TableColumn fx:id="item_no" prefWidth="147.0" text="Item No." />
+            <TableColumn fx:id="item_name" minWidth="0.0" prefWidth="237.0" text="Item Name" />
+            <TableColumn fx:id="qty" minWidth="0.0" prefWidth="115.0" text="Qty" />
+            <TableColumn fx:id="price" prefWidth="150.0" text="Price (Rs)" />
+            <TableColumn fx:id="gst" prefWidth="86.0" text="GST %" />
+         </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="373.0" layoutY="17.0" prefHeight="34.0" prefWidth="154.0" text="Items in Stock">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Button alignment="CENTER" layoutX="30.0" layoutY="12.0" mnemonicParsing="false" onAction="#backClicked" prefHeight="6.0" prefWidth="86.0" text="Back">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

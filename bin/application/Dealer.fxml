@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Dealer">
+   <children>
+      <Label alignment="CENTER" layoutX="454.0" layoutY="20.0" prefHeight="40.0" prefWidth="293.0" text="Add New Dealer">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="90.0" prefHeight="31.0" prefWidth="168.0" text="Dealer Name :">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name1" layoutX="190.0" layoutY="86.0" prefHeight="39.0" prefWidth="245.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="450.0" layoutY="90.0" prefHeight="31.0" prefWidth="168.0" text="Mobile Number :">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="mobile1" layoutX="618.0" layoutY="86.0" prefHeight="39.0" prefWidth="137.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="765.0" layoutY="86.0" prefHeight="31.0" prefWidth="94.0" text="Email iD :">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="email1" layoutX="859.0" layoutY="82.0" prefHeight="39.0" prefWidth="293.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="48.0" layoutY="140.0" prefHeight="31.0" prefWidth="94.0" text="Address : ">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="address1" layoutX="142.0" layoutY="136.0" prefHeight="39.0" prefWidth="479.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="641.0" layoutY="140.0" prefHeight="31.0" prefWidth="79.0" text="GSTIN : ">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="gstin1" layoutX="718.0" layoutY="136.0" prefHeight="39.0" prefWidth="384.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button layoutX="528.0" layoutY="214.0" mnemonicParsing="false" onAction="#addClicked" prefHeight="40.0" prefWidth="145.0" text="Add Dealer">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tv" layoutX="15.0" layoutY="340.0" prefHeight="546.0" prefWidth="1170.0">
+         <columns>
+            <TableColumn fx:id="name" prefWidth="215.0" text="Name" />
+            <TableColumn fx:id="address" minWidth="0.0" prefWidth="347.0" text="Address" />
+            <TableColumn fx:id="mobile" minWidth="0.0" prefWidth="151.0" text="Mobile Number" />
+            <TableColumn fx:id="email" prefWidth="270.0" text="Email ID" />
+            <TableColumn fx:id="gstin" prefWidth="234.0" text="GSTIN" />
+         </columns>
+      </TableView>
+      <Button layoutX="780.0" layoutY="280.0" mnemonicParsing="false" onAction="#deleteClicked" prefHeight="40.0" prefWidth="158.0" text="Delete Dealer">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="965.0" layoutY="280.0" mnemonicParsing="false" onAction="#editClicked" prefHeight="40.0" prefWidth="137.0" text="Edit Dealer">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="43.0" layoutY="20.0" mnemonicParsing="false" onAction="#backClicked" prefHeight="23.0" prefWidth="79.0" text="Back">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button layoutX="174.0" layoutY="280.0" mnemonicParsing="false" onAction="#updateClicked" prefHeight="42.0" prefWidth="176.0" text="Update Dealer">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

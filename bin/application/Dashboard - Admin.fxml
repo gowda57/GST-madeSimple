@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="503.0" prefWidth="744.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminDashboardController">
+   <children>
+      <Label fx:id="greetings" alignment="CENTER" layoutX="121.0" layoutY="28.0" prefHeight="47.0" prefWidth="484.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="121.0" layoutY="74.0" prefHeight="41.0" prefWidth="484.0" text="Choose from the options below">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button contentDisplay="CENTER" layoutX="300.0" layoutY="159.0" mnemonicParsing="false" onAction="#userInfoClicked" prefHeight="47.0" prefWidth="127.0" text="Users Info">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="184.0" layoutY="233.0" mnemonicParsing="false" onAction="#reportsClicked" prefHeight="47.0" prefWidth="358.0" text="Get your reports to file your returns">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="149.0" layoutY="307.0" mnemonicParsing="false" onAction="#returnsClicked" prefHeight="47.0" prefWidth="435.0" text="Click here for filing your income tax returns ">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="300.0" layoutY="408.0" mnemonicParsing="false" onAction="#logoutClicked" prefHeight="47.0" prefWidth="127.0" text="LOGOUT">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

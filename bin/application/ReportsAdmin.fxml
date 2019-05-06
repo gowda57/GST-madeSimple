@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ReportsAdmin">
+   <children>
+      <Label layoutX="48.0" layoutY="108.0" prefHeight="36.0" prefWidth="100.0" text="Sort By :">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="548.0" layoutY="7.0" prefHeight="36.0" prefWidth="106.0" text="Reports">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cb" layoutX="149.0" layoutY="110.0" onAction="#sortClicked" prefHeight="36.0" prefWidth="201.0" promptText="Select" />
+      <TableView fx:id="tv" layoutX="15.0" layoutY="212.0" prefHeight="678.0" prefWidth="1170.0">
+         <columns>
+            <TableColumn fx:id="invoice_no" prefWidth="171.0" text="Invoice No." />
+            <TableColumn fx:id="invoice_date" minWidth="0.0" prefWidth="219.0" text="Invoice Date" />
+            <TableColumn fx:id="cgst_amt" prefWidth="199.0" text="CGST Amt (Rs)" />
+            <TableColumn fx:id="sgst_amt" prefWidth="191.0" text="SGST Amt (Rs)" />
+            <TableColumn fx:id="tot_gst_amt" minWidth="0.0" prefWidth="208.0" text="Total GST Amt (Rs)" />
+            <TableColumn fx:id="tot_amt" prefWidth="181.0" text="Total Amount (Rs)" />
+         </columns>
+      </TableView>
+      <Label layoutX="792.0" layoutY="53.0" prefHeight="31.0" prefWidth="381.0" text="Total amount for the selected report (Rs)">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="total_amt" alignment="CENTER" editable="false" layoutX="908.0" layoutY="84.0" prefHeight="39.0" prefWidth="150.0">
+         <font>
+            <Font size="22.0" />
+         </font></TextField>
+      <Button layoutX="905.0" layoutY="144.0" mnemonicParsing="false" onAction="#printClicked" prefHeight="36.0" prefWidth="156.0" text="Print Report">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="43.0" layoutY="16.0" mnemonicParsing="false" onAction="#backClicked" prefHeight="31.0" prefWidth="72.0" text="Back">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="from" layoutX="477.0" layoutY="86.0" promptText="Report From" />
+      <DatePicker fx:id="to" layoutX="477.0" layoutY="137.0" promptText="Report To" />
+      <Label layoutX="394.0" layoutY="84.0" text="From :">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="396.0" layoutY="135.0" text="To :">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="725.0" layoutY="106.0" mnemonicParsing="false" onAction="#searchClicked" text="SEARCH">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="230.0" layoutY="16.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="45.0" prefWidth="106.0" text="Refresh">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

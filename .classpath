@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.12.jar" sourcepath="C:/Program Files (x86)/MySQL/Connector J 8.0/src.zip"/>
+	<classpathentry kind="lib" path="C:/Users/gowth/eclipse-workspace/GST - Invoice and Billing/lib/commons-beanutils-1.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gowth/eclipse-workspace/GST - Invoice and Billing/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gowth/eclipse-workspace/GST - Invoice and Billing/lib/commons-digester-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gowth/eclipse-workspace/GST - Invoice and Billing/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gowth/eclipse-workspace/GST - Invoice and Billing/lib/groovy-all-2.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gowth/eclipse-workspace/GST - Invoice and Billing/lib/itextpdf-5.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gowth/eclipse-workspace/GST - Invoice and Billing/lib/itext-pdfa-5.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gowth/eclipse-workspace/GST - Invoice and Billing/lib/jasper-compiler-jdt.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gowth/eclipse-workspace/GST - Invoice and Billing/lib/jasperreports-6.0.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

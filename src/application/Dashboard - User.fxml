@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="620.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserDashboardController">
+   <children>
+      <Label fx:id="greetings" alignment="CENTER" layoutX="154.0" layoutY="38.0" prefHeight="47.0" prefWidth="484.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="154.0" layoutY="94.0" prefHeight="41.0" prefWidth="484.0" text="Choose from the options below">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button alignment="CENTER" layoutX="149.0" layoutY="209.0" mnemonicParsing="false" onAction="#customerClicked" prefHeight="59.0" prefWidth="122.0" text="Customer">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="342.0" layoutY="209.0" mnemonicParsing="false" onAction="#dealerClicked" prefHeight="59.0" prefWidth="122.0" text="Dealer">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="529.0" layoutY="209.0" mnemonicParsing="false" onAction="#purchaseClicked" prefHeight="59.0" prefWidth="122.0" text="Purchase">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="149.0" layoutY="321.0" mnemonicParsing="false" onAction="#itemsClicked" prefHeight="59.0" prefWidth="122.0" text="Items">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="342.0" layoutY="321.0" mnemonicParsing="false" onAction="#billingClicked" prefHeight="59.0" prefWidth="122.0" text="Billing">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="342.0" layoutY="469.0" mnemonicParsing="false" onAction="#logoutClicked" prefHeight="47.0" prefWidth="109.0" text="Logout">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="529.0" layoutY="321.0" mnemonicParsing="false" onAction="#reportsClicked" prefHeight="59.0" prefWidth="122.0" text="Reports">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
